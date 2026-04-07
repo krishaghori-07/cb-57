@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>
+                    4th way to create object
+                </h1>
+            </div>
+        </div>
+        <div class="row" id="team">
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        //create class
+        class Player {
+            constructor(name, runs, ball, four, six) {
+                //this function will be called automatically when we create object of class such functions are known as callback function.
+                this.name = name;
+                this.runs = runs;
+                this.ball = ball;
+                this.four = four;
+                this.six = six;
+            }
+            add() {
+                console.log(this);//it will display all properties of object
+                let card=`<div class="col-lg-3">
+                    <div class="card-shadow">
+                        <div class="card-header text-bg-primary">
+                            <h3>${this.name}</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>runs</b>${this.runs}</li>
+                                <li class="list-group-item"><b>ball</b>${this.ball}</li>
+                                <li class="list-group-item"><b>fours</b>${this.fours}</li>
+                                <li class="list-group-item"><b>six</b>${this.six}</li>
+                                </ul>
+                                </div>
+                                </div>`;
+                                document.getElementById('team').innerHTML=card;
+            }
+        }
+        //now create object using class
+        //var object=new class(value)
+        var p1 = new Player("virat kohli", 100, 67, 5, 6);
+        p1.add();
+        var p2 = new Player("shbhman gill", 345, 678, 45, 56);
+        p2.add();
+
+    </script>
+</body>
+
+</html>
