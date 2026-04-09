@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        single level inheritance
+    </h1>
+    <div id="output"></div>
+    <script>
+        var output=document.getElementById('output');
+        //create base/parent class
+        class person{
+            constructor(name)
+            {
+                this.name=name;
+                console.log('person class constructor called');
+            }
+            walk(){
+                output.innerHTML+=`${this.name}can walk<br/>`;
+            }
+             talk(){
+                output.innerHTML+=`${this.name}can talk<br/>`;
+            }
+        }
+        //create child/sub/derived class
+        class student extends person{
+            //if parent class has constructor with argument,then child must have constructorwith arguments
+            constructor(name,language)
+            {
+                //must call parent class constructor
+                super(name);
+                this.language=language;
+                console.log('student class constructor called');
+            }
+            read()
+            {
+                output.innerHTML+=`${this.name} can read ${this.language}<br/>`;
+            }
+             write()
+            {
+                output.innerHTML+=`${this.name} can write ${this.language}<br/>`;
+            }
+            WhatICanDo()
+            {
+                super.walk();
+                super.talk();
+                this.read();
+                this.write();
+            }
+          }
+          //create student object
+          var s1=new student("krisha ghori","gujrati");
+          //call method of student class
+          s1.WhatICanDo();
+    </script>
+</body>
+</html>
