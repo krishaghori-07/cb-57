@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array/list</h1>
+    <hr>
+    <script>
+        //to store multiple values in single variable ,we use list
+        //create list
+        var names=["krisha","lalji","mayur","karan"];
+        //             0        1      2        3
+        var list=[10,20,30,50,100,500];
+        var box=['car',3.14,true,100];
+        console.log(names);
+        console.log(list);
+        console.log(box);
+        //empty list
+        var things=[];
+        console.log(things);
+        //how to access particular item in list
+        //display first name
+        console.log("1st name",names[0]);//krisha
+        console.log("3rd name",names[2]);//mayur
+        console.log("4th name",names[3]);//karan
+        //how to change item's value
+        names[0]="khushi patel";//change value at 0th position
+        console.log("updates 1st name",names[0]);
+        //insert value 
+        names[4]="Ram";
+        console.log(names);
+    </script>
+</body>
+</html>
