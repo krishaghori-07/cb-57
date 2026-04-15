@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>list related methods</h1>
+    <b>use console to checkout</b>
+    <script>
+        //create list
+        var countries=[];//empty list
+        //let us push values (at the end of list)
+        countries.push("australia");
+        countries.push("canada");
+        countries.push("england");
+        console.log(countries);
+        //let us push value at the beggining  of the list.
+        countries.unshift("india");
+        countries.unshift("china");
+        console.log(countries);
+        //let us remove value from the end of list
+        let removedCountry=countries.pop();
+        console.log(removedCountry);
+        //let us remove the value from beggining
+        removedCountry=countries.shift();
+        console.log(removedCountry);
+        console.log(countries);
+        countries.sort();
+        console.log(countries);
+        countries.reverse();
+        console.log(countries);
+        console.log("position of canada in list",countries.indexOf('canada'));
+        console.log("position of china in list",countries.indexOf('china'));
+        console.log("position of england in list",countries.indexOf('england'));
+        console.log("position of india in list",countries.indexOf('india'));
+        var europe=['france','italy','germany'];
+        countries=countries.concat(europe);
+        console.log(countries);
+        //remove two countries from beggining
+        countries.splice(0,2);
+        console.log(countries);
+        console.log(countries.join(" "));
+        
+        
+
+</script>
+</body>
+</html>
